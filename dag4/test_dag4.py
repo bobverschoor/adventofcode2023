@@ -38,5 +38,6 @@ class TestcardTable(unittest.TestCase):
 
         self.assertEqual(30, ct.get_totalcards())
 
+
 if __name__ == '__main__':
     unittest.main()

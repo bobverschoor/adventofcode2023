@@ -15,7 +15,7 @@ class Card:
         self._winning_numbers = []
         self._own_numbers = []
         self._cardnumbers = []
-        self.nrofcopies = 0
+        self.nrofinstances = 1
 
     @property
     def number(self):
@@ -96,15 +96,12 @@ class CardsTable:
 
     def get_totalcards(self):
         total = 0
-        cardinstances = []
         for card in self.cards:
-            cardinstances.append(card.number)
+            for copy in range(0, card.nrofinstances):
+                for cardcopynr in card.cardnumbers:
+                    self.cards[cardcopynr - 1].nrofinstances += 1
         for card in self.cards:
-            for cardcopy in card.cardnumbers:
-                if cardcopy != card.number:
-                    self.cards[cardcopy - 1].cardnumbers.append(cardcopy)
-        for card in self.cards:
-            total += len(card.cardnumbers)
+            total += card.nrofinstances
 
         return total
 
@@ -112,3 +109,4 @@ class CardsTable:
 if __name__ == '__main__':
     ct = CardsTable()
     print(ct.get_totalpoints())
+    print(ct.get_totalcards())
