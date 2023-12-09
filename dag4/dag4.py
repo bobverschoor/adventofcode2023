@@ -74,7 +74,7 @@ class CardsTable:
         return self._cards
 
     def readinput(self):
-        inputfile = open('input.txt', 'r')
+        inputfile = open('../resources/input.txt', 'r')
         for line in inputfile.readlines():
             self._lines.append(line.strip())
 
