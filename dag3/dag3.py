@@ -99,7 +99,7 @@ class EngineSchematic:
         self._max_y = 0
 
     def readinput(self):
-        inputfile = open('input.txt', 'r')
+        inputfile = open('../resources/input3.txt', 'r')
         for line in inputfile.readlines():
             self._lines.append(line.strip())
 

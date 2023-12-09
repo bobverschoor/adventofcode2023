@@ -53,7 +53,7 @@ class CalibrationDocument:
         self._lines = None
 
     def readinput(self):
-        inputfile = open('input.txt', 'r')
+        inputfile = open('../resources/input1.txt', 'r')
         self._lines = inputfile.readlines()
 
     def get_calibration_values(self):

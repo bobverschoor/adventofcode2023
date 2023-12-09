@@ -59,7 +59,7 @@ class Games:
         self._games = {}
 
     def readinput(self):
-        inputfile = open('input.txt', 'r')
+        inputfile = open('../resources/input2.txt', 'r')
         self._lines = inputfile.readlines()
 
     def get_game(self, game_id):
